@@ -18,11 +18,27 @@ function absoluteValues(arr) {
   return newArr
 }
 
-function yelledGreetings() {
+function yelledGreetings(arr) {
+  const newArr = []
+  for (i=0;i<arr.length;i++) {
+    newArr.push(arr[i]+'!')
+  }
+  return newArr
 }
 
-function changeToInitials() {
+function changeToInitials(arr) {
+  const newArr = []
+  for (i=0;i<arr.length;i++) {
+    if(i === 0){
+      newArr.push(arr[0])
+    } else if (arr[i-1] === ' ') {
+      newArr.push(arr[i])
+    }
+    
+  }
+  return newArr
 }
+
 
 function doubleOdd() {
 }
