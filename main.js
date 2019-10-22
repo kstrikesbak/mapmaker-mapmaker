@@ -28,11 +28,12 @@ function yelledGreetings(arr) {
 
 function changeToInitials(arr) {
   const newArr = []
+  
   for (i=0;i<arr.length;i++) {
     if(i === 0){
-      newArr.push(arr[0])
+      newArr.push(arr[i][0])
     } else if (arr[i-1] === ' ') {
-      newArr.push(arr[i])
+      newArr.push(arr[i][0])
     }
     
   }
@@ -40,10 +41,31 @@ function changeToInitials(arr) {
 }
 
 
-function doubleOdd() {
+function doubleOdd(arr) {
+  const newArr = []
+  for (let i=0;i<arr.length;i++) {
+    if (arr[i] % 2 === 1 || arr[i] % 2 === -1){
+    newArr.push(arr[i] * 2)
+  } else {
+    newArr.push(arr[i])
+  }
+}
+return newArr
 }
 
-function upperCaseFirstLetters() {
+
+function upperCaseFirstLetters(arr) {
+  const newArr = []
+  
+  for (i=0;i<arr.length;i++) {
+    if(i === 0){
+      newArr.push(arr[i][0].toUpperCase())
+    } else {
+      newArr.push(arr[i][i])
+    }
+    
+  }
+  return newArr
 }
 
 function add1ToLeft() {
