@@ -6,7 +6,16 @@ function doubleAll(arr) {
   return newArr
 }
 
-function absoluteValues() {
+function absoluteValues(arr) {
+  const newArr = []
+  for (i=0;i<arr.length;i++) {
+    if (arr[i]>0 || arr[i]===0) {
+    newArr.push(arr[i])
+  } else {
+    newArr.push(arr[i]-2*arr[i])
+  }
+  }
+  return newArr
 }
 
 function yelledGreetings() {
