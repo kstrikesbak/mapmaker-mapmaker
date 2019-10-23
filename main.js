@@ -12,7 +12,7 @@ function absoluteValues(arr) {
     if (arr[i]>0 || arr[i]===0) {
     newArr.push(arr[i])
   } else {
-    newArr.push(arr[i]-2*arr[i])
+    newArr.push(-1*arr[i])
   }
   }
   return newArr
@@ -27,17 +27,16 @@ function yelledGreetings(arr) {
 }
 
 function changeToInitials(arr) {
-  const newArr = []
-  
-  for (i=0;i<arr.length;i++) {
-    if(i === 0){
-      newArr.push(arr[i][0])
-    } else if (arr[i-1] === ' ') {
-      newArr.push(arr[i][0])
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    let component = arr[i];
+    let letter = '';
+    for (let i = 0; i < component.length; i++){
+    if (i===0 || component[i-1] === ' '){
+      letter = letter + component[i];
     }
-    
-  }
-  return newArr
+  }newArr.push(letter)
+  }return newArr
 }
 
 
