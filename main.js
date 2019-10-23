@@ -30,12 +30,12 @@ function changeToInitials(arr) {
   const newArr = [];
   for (let i = 0; i < arr.length; i++){
     let component = arr[i];
-    let letter = '';
+    let newStr = '';
     for (let i = 0; i < component.length; i++){
     if (i===0 || component[i-1] === ' '){
-      letter = letter + component[i];
+      newStr = newStr + component[i];
     }
-  }newArr.push(letter)
+  }newArr.push(newStr)
   }return newArr
 }
 
@@ -54,17 +54,18 @@ return newArr
 
 
 function upperCaseFirstLetters(arr) {
-  const newArr = []
-  
-  for (i=0;i<arr.length;i++) {
-    if(i === 0){
-      newArr.push(arr[i][0].toUpperCase())
+  const newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    let component = arr[i];
+    let newStr = '';
+    for (let i = 0; i < component.length; i++){
+    if (i===0){
+      newStr = newStr + component[i].toUpperCase();
     } else {
-      newArr.push(arr[i][i])
+      newStr = newStr + component[i].toLowerCase();
     }
-    
-  }
-  return newArr
+  }newArr.push(newStr)
+  }return newArr
 }
 
 function add1ToLeft() {
