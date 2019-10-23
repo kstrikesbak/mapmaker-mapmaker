@@ -26,6 +26,27 @@ function yelledGreetings(arr) {
   return newArr
 }
 
+
+// let arr = ['Jim Smith','Mark Jones']
+// following function outputs [ 'J', 'S', 'M', 'J' ] 
+// and not sure how to join them 
+
+// function changeToInitials(arr) {
+//   const newArr = []
+//   for (i=0;i<arr.length;i++) {
+//     for(j=0;j<arr[i].length;j++){
+//     if( j === 0){
+//       //console.log(arr[i].length)
+//       newArr.push(arr[i][j])
+//     } else if (arr[i][j] === ' ') {
+//       newArr.push(arr[i][j+1])
+//     }
+//   }
+//   }
+//   return newArr
+//  }
+//  changeToInitials(arr)
+
 function changeToInitials(arr) {
   const newArr = [];
   for (let i = 0; i < arr.length; i++){
@@ -68,7 +89,17 @@ function upperCaseFirstLetters(arr) {
   }return newArr
 }
 
-function add1ToLeft() {
+function add1ToLeft(arr) {
+  const newArr = [];
+
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 0) {
+    newArr.push(Number(`1${arr[i]}`))
+  } else {
+    newArr.push(Number(`1${arr[i] * -1}` * -1))
+    }
+  }
+  return newArr;
 }
 
 
